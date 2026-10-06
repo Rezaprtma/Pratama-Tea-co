@@ -1,307 +1,508 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pratama Tea Co. — Good Tea, Better Days</title>
-<meta name="description" content="Pratama Tea Co. — premium organic artisan tea, hand-plicked at first light and small-batch crafted." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratama Tea Co. — Good Tea, Better Days</title>
+    <meta
+      name="description"
+      content="Pratama Tea Co. — premium organic artisan tea, hand-plicked at first light and small-batch crafted."
+    />
 
-<link rel="icon" type="image/png" href="images/logo-pratama.png" />
-<link rel="apple-touch-icon" href="images/logo-pratama.png" />
+    <link rel="icon" type="image/png" href="images/logo-pratama.png" />
+    <link rel="apple-touch-icon" href="images/logo-pratama.png" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          bone: '#F9F6ED',
-          boneDeep: '#F2EDDF',
-          gold: '#C5A059',
-          goldSoft: '#DCC08A',
-          goldDeep: '#9E7B2E',
-          matcha: '#4A5D23',
-          matchaDeep: '#37431A',
-          ink: '#2B2A26'
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bone: "#F9F6ED",
+              boneDeep: "#F2EDDF",
+              gold: "#C5A059",
+              goldSoft: "#DCC08A",
+              goldDeep: "#9E7B2E",
+              matcha: "#4A5D23",
+              matchaDeep: "#37431A",
+              ink: "#2B2A26",
+            },
+            fontFamily: {
+              serif: [
+                '"Playfair Display"',
+                "Goudy Old Style",
+                "Georgia",
+                "serif",
+              ],
+              display: [
+                '"Cormorant Garamond"',
+                '"Playfair Display"',
+                "Goudy Old Style",
+                "Georgia",
+                "serif",
+              ],
+            },
+            letterSpacing: {
+              luxe: "0.24em",
+            },
+          },
         },
-        fontFamily: {
-          serif: ['"Playfair Display"', 'Goudy Old Style', 'Georgia', 'serif'],
-          display: ['"Cormorant Garamond"', '"Playfair Display"', 'Goudy Old Style', 'Georgia', 'serif']
-        },
-        letterSpacing: {
-          luxe: '0.24em'
-        }
-      }
-    }
-  }
-</script>
-</head>
+      };
+    </script>
+  </head>
 
-<body class="bg-bone font-serif text-ink antialiased selection:bg-gold/25 selection:text-matcha">
-
-  <!-- ===== Top Notice ===== -->
-  <div class="border-b border-matcha/10">
-    <p class="mx-auto max-w-7xl px-6 py-3 text-center text-[12px] uppercase tracking-luxe text-matcha/85"
-       data-en="Handcrafted in Java &middot; Organic &amp; Small-Batch &middot; Free Shipping Over Rp 200.000"
-       data-id="Dikerjakan Tangan di Jawa &middot; Organik &amp; Small-Batch &middot; Gratis Ongkir di atas Rp 200.000"></p>
-  </div>
-
-  <!-- ===== Navbar ===== -->
-  <header class="sticky top-0 z-50 border-b border-matcha/10 bg-bone/90 backdrop-blur-[6px]">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-      <a href="#home" class="flex items-center gap-4">
-        <!-- GANTI FILE: images/logo-pratama.png -->
-        <img src="images/logo-pratama.png" alt="Pratama Tea Co. Logo" class="h-11 w-11 object-contain" />
-        <span class="hidden flex-col leading-none sm:flex">
-          <span class="text-[17px] tracking-[0.18em] text-matcha">PRATAMA</span>
-          <span class="mt-1 text-[11px] tracking-luxe text-goldDeep">TEA CO.</span>
-        </span>
-      </a>
-
-      <div class="flex items-center gap-6 md:gap-9">
-        <a href="#home"  class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
-           data-en="Home" data-id="Beranda">Home</a>
-        <a href="#shop"  class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
-           data-en="Shop" data-id="Toko">Shop</a>
-        <a href="#story" class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
-           data-en="Story" data-id="Cerita">Story</a>
-
-        <!-- Language Toggle -->
-        <button id="langToggle" type="button"
-                class="border border-matcha/25 px-4 py-3 text-[12px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:border-matcha hover:bg-matcha hover:text-bone"
-                aria-label="Ganti bahasa">ID</button>
-
-        <a href="#order"
-           class="border border-gold px-6 py-3 text-[12px] font-medium uppercase tracking-luxe text-goldDeep transition-colors duration-300 hover:bg-gold hover:text-bone"
-           data-en="Order Now" data-id="Pesan Sekarang">Order Now</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section id="home">
-    <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 md:py-28 lg:grid-cols-2 lg:gap-24">
-
-      <!-- Kiri: Tipografi -->
-      <div class="order-2 lg:order-1">
-        <p class="text-[13px] uppercase tracking-luxe text-goldDeep"
-           data-en="Premium Organic Artisan Tea"
-           data-id="Teh Artisan Organik Premium">Premium Organic Artisan Tea</p>
-
-        <h1 class="mt-7 font-display text-[3.5rem] font-medium leading-[1.04] tracking-[-0.01em] text-matcha sm:text-[4.5rem] lg:text-[5.25rem]">
-          <span data-en="Good Tea," data-id="Teh Baik,">Good Tea,</span><br />
-          <span class="italic text-goldDeep" data-en="Better Days." data-id="Hari Lebih Baik.">Better Days.</span>
-        </h1>
-
-        <div class="mt-9 h-px w-16 bg-gold/60"></div>
-
-        <p class="mt-9 max-w-md text-[17px] leading-[1.85] text-matcha/90"
-           data-en="Long-leaf teas, hand-plucked at first light and blended in small batches. Nothing artificial, nothing rushed &mdash; only whole, honest leaves that brew into a calm, unhurried ritual for every single day."
-           data-id="Teh daun panjang, dipetik tangan saat fajar pertama dan dicampur dalam batch kecil. Tanpa pewarna buatan, tanpa terburu-buru &mdash; hanya daun utuh dan jujur yang menyeduh menjadi ritual tenang untuk setiap hari."></p>
-
-        <div class="mt-11 flex flex-wrap items-center gap-6">
-          <a href="#shop"
-             class="bg-matcha px-9 py-4 text-[13px] font-medium uppercase tracking-luxe text-bone transition-colors duration-300 hover:bg-matchaDeep"
-             data-en="Explore the Collection"
-             data-id="Jelajahi Koleksi">Explore the Collection</a>
-          <a href="#story"
-             class="border-b border-gold/70 pb-1 text-[13px] font-medium uppercase tracking-luxe text-goldDeep transition-colors duration-300 hover:border-matcha hover:text-matcha"
-             data-en="Our Story"
-             data-id="Cerita Kami">Our Story</a>
-        </div>
-      </div>
-
-      <!-- Kanan: Mockup Kemasan (SATU-SATUNYA gambar produk) -->
-      <div class="order-1 flex flex-col items-center lg:order-2">
-        <p class="text-[12px] uppercase tracking-luxe text-matcha/80">Est. 1998 &mdash; Bandung</p>
-        <!-- GANTI FILE: images/product-tin-white.png -->
-        <img src="images/product-tin-white.png" alt="Pratama Tea Co. matte white tea tin"
-             class="mt-8 h-auto w-full max-w-sm object-contain drop-shadow-[0_30px_45px_rgba(74,93,35,0.16)]" />
-        <p class="mt-10 text-center text-[12px] uppercase tracking-luxe text-matcha/80"
-           data-en="Hand-Packed &middot; 100 g Loose Leaf"
-           data-id="Dikemas Tangan &middot; 100 g Daun Kering">Hand-Packed &middot; 100 g Loose Leaf</p>
-      </div>
-
+  <body
+    class="bg-bone font-serif text-ink antialiased selection:bg-gold/25 selection:text-matcha"
+  >
+    <!-- ===== Top Notice ===== -->
+    <div class="border-b border-matcha/10">
+      <p
+        class="mx-auto max-w-7xl px-6 py-3 text-center text-[12px] uppercase tracking-luxe text-matcha/85"
+        data-en="Handcrafted in Java &middot; Organic &amp; Small-Batch &middot; Free Shipping Over Rp 200.000"
+        data-id="Dikerjakan Tangan di Jawa &middot; Organik &amp; Small-Batch &middot; Gratis Ongkir di atas Rp 200.000"
+      ></p>
     </div>
-  </section>
 
-  <!-- ===== Our Story (HANYA TEKS) ===== -->
-  <section id="story" class="border-t border-matcha/10">
-    <div class="mx-auto max-w-3xl px-6 py-24 text-center">
-      <p class="text-[13px] uppercase tracking-luxe text-goldDeep"
-         data-en="Our Story" data-id="Cerita Kami">Our Story</p>
+    <!-- ===== Navbar ===== -->
+    <header
+      class="sticky top-0 z-50 border-b border-matcha/10 bg-bone/90 backdrop-blur-[6px]"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5"
+      >
+        <a href="#home" class="flex items-center gap-4">
+          <!-- GANTI FILE: images/logo-pratama.png -->
+          <img
+            src="images/logo-pratama.png"
+            alt="Pratama Tea Co. Logo"
+            class="h-11 w-11 object-contain"
+          />
+          <span class="hidden flex-col leading-none sm:flex">
+            <span class="text-[17px] tracking-[0.18em] text-matcha"
+              >PRATAMA</span
+            >
+            <span class="mt-1 text-[11px] tracking-luxe text-goldDeep"
+              >TEA CO.</span
+            >
+          </span>
+        </a>
 
-      <h2 class="mt-8 font-display text-4xl leading-[1.2] text-matcha sm:text-[3rem]">
-        <span data-en="A quiet craft, kept for" data-id="Sebuah kerajinan sunyi,">A quiet craft,<br />kept for</span>
-        <span class="italic text-goldDeep" data-en="generations." data-id="diwariskan turun-temurun.">generations.</span>
-      </h2>
+        <div class="flex items-center gap-6 md:gap-9">
+          <a
+            href="#home"
+            class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
+            data-en="Home"
+            data-id="Beranda"
+            >Home</a
+          >
+          <a
+            href="#shop"
+            class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
+            data-en="Shop"
+            data-id="Toko"
+            >Shop</a
+          >
+          <a
+            href="#story"
+            class="text-[14px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:text-goldDeep"
+            data-en="Story"
+            data-id="Cerita"
+            >Story</a
+          >
 
-      <div class="mx-auto mt-10 flex items-center justify-center gap-4">
-        <span class="h-px w-10 bg-gold/50"></span>
-        <span class="h-1 w-1 rounded-full bg-goldDeep"></span>
-        <span class="h-px w-10 bg-gold/50"></span>
+          <!-- Language Toggle -->
+          <button
+            id="langToggle"
+            type="button"
+            class="border border-matcha/25 px-4 py-3 text-[12px] font-medium uppercase tracking-luxe text-matcha transition-colors duration-300 hover:border-matcha hover:bg-matcha hover:text-bone"
+            aria-label="Ganti bahasa"
+          >
+            ID
+          </button>
+
+          <a
+            href="#order"
+            class="border border-gold px-6 py-3 text-[12px] font-medium uppercase tracking-luxe text-goldDeep transition-colors duration-300 hover:bg-gold hover:text-bone"
+            data-en="Order Now"
+            data-id="Pesan Sekarang"
+            >Order Now</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section id="home">
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 md:py-28 lg:grid-cols-2 lg:gap-24"
+      >
+        <!-- Kiri: Tipografi -->
+        <div class="order-2 lg:order-1">
+          <p
+            class="text-[13px] uppercase tracking-luxe text-goldDeep"
+            data-en="Premium Organic Artisan Tea"
+            data-id="Teh Artisan Organik Premium"
+          >
+            Premium Organic Artisan Tea
+          </p>
+
+          <h1
+            class="mt-7 font-display text-[3.5rem] font-medium leading-[1.04] tracking-[-0.01em] text-matcha sm:text-[4.5rem] lg:text-[5.25rem]"
+          >
+            <span data-en="Good Tea," data-id="Teh Baik,">Good Tea,</span><br />
+            <span
+              class="italic text-goldDeep"
+              data-en="Better Days."
+              data-id="Hari Lebih Baik."
+              >Better Days.</span
+            >
+          </h1>
+
+          <div class="mt-9 h-px w-16 bg-gold/60"></div>
+
+          <p
+            class="mt-9 max-w-md text-[17px] leading-[1.85] text-matcha/90"
+            data-en="Long-leaf teas, hand-plucked at first light and blended in small batches. Nothing artificial, nothing rushed &mdash; only whole, honest leaves that brew into a calm, unhurried ritual for every single day."
+            data-id="Teh daun panjang, dipetik tangan saat fajar pertama dan dicampur dalam batch kecil. Tanpa pewarna buatan, tanpa terburu-buru &mdash; hanya daun utuh dan jujur yang menyeduh menjadi ritual tenang untuk setiap hari."
+          ></p>
+
+          <div class="mt-11 flex flex-wrap items-center gap-6">
+            <a
+              href="#shop"
+              class="bg-matcha px-9 py-4 text-[13px] font-medium uppercase tracking-luxe text-bone transition-colors duration-300 hover:bg-matchaDeep"
+              data-en="Explore the Collection"
+              data-id="Jelajahi Koleksi"
+              >Explore the Collection</a
+            >
+            <a
+              href="#story"
+              class="border-b border-gold/70 pb-1 text-[13px] font-medium uppercase tracking-luxe text-goldDeep transition-colors duration-300 hover:border-matcha hover:text-matcha"
+              data-en="Our Story"
+              data-id="Cerita Kami"
+              >Our Story</a
+            >
+          </div>
+        </div>
+
+        <!-- Kanan: Mockup Kemasan (SATU-SATUNYA gambar produk) -->
+        <div class="order-1 flex flex-col items-center lg:order-2">
+          <p class="text-[12px] uppercase tracking-luxe text-matcha/80">
+            Est. 1998 &mdash; Bandung
+          </p>
+          <!-- GANTI FILE: images/product-tin-white.png -->
+          <img
+            src="images/product-tin-white.png"
+            alt="Pratama Tea Co. matte white tea tin"
+            class="mt-8 h-auto w-full max-w-sm object-contain drop-shadow-[0_30px_45px_rgba(74,93,35,0.16)]"
+          />
+          <p
+            class="mt-10 text-center text-[12px] uppercase tracking-luxe text-matcha/80"
+            data-en="Hand-Packed &middot; 100 g Loose Leaf"
+            data-id="Dikemas Tangan &middot; 100 g Daun Kering"
+          >
+            Hand-Packed &middot; 100 g Loose Leaf
+          </p>
+        </div>
       </div>
+    </section>
 
-      <p class="mx-auto mt-10 max-w-2xl text-[17px] leading-[1.95] text-matcha/90"
-         data-en="Pratama began on a hillside garden where every leaf was picked by hand, weighed by eye, and dried in the shade of bamboo. Three decades later, the method has not changed. Only the patience has grown."
-         data-id="Pratama bermula di kebun perbukitan, tempat setiap daun dipetik tangan, dinilai dengan teliti, lalu dijemur di bawah naungan bambu. Tiga dekade kemudian, cara itu belum berubah. Hanya kesabarannya yang bertumbuh."></p>
-      <p class="mx-auto mt-6 max-w-2xl text-[17px] leading-[1.95] text-matcha/90"
-         data-en="Each tin is sealed on the very day it is filled, so what arrives at your table is exactly what left the garden &mdash; whole, honest, and unhurried."
-         data-id="Setiap kaleng disegel pada hari yang sama saat diisi, apa yang tiba di meja Anda sama dengan yang meninggalkan kebun &mdash; utuh, jujur, dan tidak terburu-buru."></p>
-    </div>
-  </section>
+    <!-- ===== Our Story (HANYA TEKS) ===== -->
+    <section id="story" class="border-t border-matcha/10">
+      <div class="mx-auto max-w-3xl px-6 py-24 text-center">
+        <p
+          class="text-[13px] uppercase tracking-luxe text-goldDeep"
+          data-en="Our Story"
+          data-id="Cerita Kami"
+        >
+          Our Story
+        </p>
 
-  <!-- ===== Features (HANYA TEKS) ===== -->
-  <section class="border-t border-matcha/10">
-    <div class="mx-auto max-w-7xl px-6 py-24">
-      <div class="grid gap-16 md:grid-cols-3 md:gap-12">
+        <h2
+          class="mt-8 font-display text-4xl leading-[1.2] text-matcha sm:text-[3rem]"
+        >
+          <span
+            data-en="A quiet craft, kept for"
+            data-id="Sebuah kerajinan sunyi,"
+            >A quiet craft,<br />kept for</span
+          >
+          <span
+            class="italic text-goldDeep"
+            data-en="generations."
+            data-id="diwariskan turun-temurun."
+            >generations.</span
+          >
+        </h2>
 
-        <div class="md:text-center">
-          <p class="font-display text-5xl text-goldDeep/70">01</p>
-          <h3 class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
->First-Light Harvest</h3>
-          <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
-          <p class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
-             data-en="Plucked before the sun climbs, when the leaf is tender and its sugars still intact."
-             data-id="Dipetik sebelum matahari naik, saat daun masih empuk dan manisnya utuh."></p>
+        <div class="mx-auto mt-10 flex items-center justify-center gap-4">
+          <span class="h-px w-10 bg-gold/50"></span>
+          <span class="h-1 w-1 rounded-full bg-goldDeep"></span>
+          <span class="h-px w-10 bg-gold/50"></span>
         </div>
 
-        <div class="md:text-center">
-          <p class="font-display text-5xl text-goldDeep/70">02</p>
-          <h3 class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
->Small-Batch Craft</h3>
-          <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
-          <p class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
-             data-en="Never more than forty kilos per blend, rested and tasted by hand before it is sealed."
-             data-id="Tidak pernah lebih dari empat puluh kilogram per campuran, selalu dicicipi langsung sebelum disegel."></p>
-        </div>
-
-        <div class="md:text-center">
-          <p class="font-display text-5xl text-goldDeep/70">03</p>
-          <h3 class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
->Nothing Added</h3>
-          <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
-          <p class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
-             data-en="No flavouring, no sweetener, no dust. Only the leaf, exactly as the garden gave it."
-             data-id="Tanpa perasa, tanpa pemanis, tanpa debu. Hanya daun, persis seperti kebun berikan."></p>
-        </div>
-
+        <p
+          class="mx-auto mt-10 max-w-2xl text-[17px] leading-[1.95] text-matcha/90"
+          data-en="Pratama began on a hillside garden where every leaf was picked by hand, weighed by eye, and dried in the shade of bamboo. Three decades later, the method has not changed. Only the patience has grown."
+          data-id="Pratama bermula di kebun perbukitan, tempat setiap daun dipetik tangan, dinilai dengan teliti, lalu dijemur di bawah naungan bambu. Tiga dekade kemudian, cara itu belum berubah. Hanya kesabarannya yang bertumbuh."
+        ></p>
+        <p
+          class="mx-auto mt-6 max-w-2xl text-[17px] leading-[1.95] text-matcha/90"
+          data-en="Each tin is sealed on the very day it is filled, so what arrives at your table is exactly what left the garden &mdash; whole, honest, and unhurried."
+          data-id="Setiap kaleng disegel pada hari yang sama saat diisi, apa yang tiba di meja Anda sama dengan yang meninggalkan kebun &mdash; utuh, jujur, dan tidak terburu-buru."
+        ></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== Shop (HANYA TEKS) ===== -->
-  <section id="shop" class="border-t border-matcha/10">
-    <div class="mx-auto max-w-5xl px-6 py-24 text-center">
-      <p class="text-[13px] uppercase tracking-luxe text-goldDeep"
-         data-en="The Collection" data-id="Koleksi Kami">The Collection</p>
-      <h2 class="mt-8 font-display text-4xl leading-tight text-matcha sm:text-[3rem]"
+    <!-- ===== Features (HANYA TEKS) ===== -->
+    <section class="border-t border-matcha/10">
+      <div class="mx-auto max-w-7xl px-6 py-24">
+        <div class="grid gap-16 md:grid-cols-3 md:gap-12">
+          <div class="md:text-center">
+            <p class="font-display text-5xl text-goldDeep/70">01</p>
+            <h3
+              class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
+            >
+              First-Light Harvest
+            </h3>
+            <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
+            <p
+              class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
+              data-en="Plucked before the sun climbs, when the leaf is tender and its sugars still intact."
+              data-id="Dipetik sebelum matahari naik, saat daun masih empuk dan manisnya utuh."
+            ></p>
+          </div>
+
+          <div class="md:text-center">
+            <p class="font-display text-5xl text-goldDeep/70">02</p>
+            <h3
+              class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
+            >
+              Small-Batch Craft
+            </h3>
+            <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
+            <p
+              class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
+              data-en="Never more than forty kilos per blend, rested and tasted by hand before it is sealed."
+              data-id="Tidak pernah lebih dari empat puluh kilogram per campuran, selalu dicicipi langsung sebelum disegel."
+            ></p>
+          </div>
+
+          <div class="md:text-center">
+            <p class="font-display text-5xl text-goldDeep/70">03</p>
+            <h3
+              class="mt-6 text-[16px] font-medium uppercase tracking-[0.16em] text-matcha"
+            >
+              Nothing Added
+            </h3>
+            <div class="mx-auto mt-6 h-px w-12 bg-gold/50 md:mx-0"></div>
+            <p
+              class="mt-6 text-[16px] leading-[1.85] text-matcha/90"
+              data-en="No flavouring, no sweetener, no dust. Only the leaf, exactly as the garden gave it."
+              data-id="Tanpa perasa, tanpa pemanis, tanpa debu. Hanya daun, persis seperti kebun berikan."
+            ></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Shop (HANYA TEKS) ===== -->
+    <section id="shop" class="border-t border-matcha/10">
+      <div class="mx-auto max-w-5xl px-6 py-24 text-center">
+        <p
+          class="text-[13px] uppercase tracking-luxe text-goldDeep"
+          data-en="The Collection"
+          data-id="Koleksi Kami"
+        >
+          The Collection
+        </p>
+        <h2
+          class="mt-8 font-display text-4xl leading-tight text-matcha sm:text-[3rem]"
           data-en="Three leaves, three moods."
-          data-id="Tiga daun, tiga suasana.">Three leaves, three moods.</h2>
-      <div class="mx-auto mt-8 h-px w-14 bg-gold/60"></div>
+          data-id="Tiga daun, tiga suasana."
+        >
+          Three leaves, three moods.
+        </h2>
+        <div class="mx-auto mt-8 h-px w-14 bg-gold/60"></div>
 
-      <div class="mt-16 grid gap-14 sm:grid-cols-3 sm:gap-10">
-        <div>
-          <h3 class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
->Signature Green Tea</h3>
-          <p class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
-             data-en="100% premium loose leaf tea (green tea)"
-             data-id="100% teh daun kering premium (green tea)">100% premium loose leaf tea (green tea)</p>
-          <p class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep">Rp 85.000</p>
+        <div class="mt-16 grid gap-14 sm:grid-cols-3 sm:gap-10">
+          <div>
+            <h3
+              class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
+            >
+              Signature Green Tea
+            </h3>
+            <p
+              class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
+              data-en="100% premium loose leaf tea (green tea)"
+              data-id="100% teh daun kering premium (green tea)"
+            >
+              100% premium loose leaf tea (green tea)
+            </p>
+            <p
+              class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep"
+            >
+              Rp 85.000
+            </p>
+          </div>
+
+          <div>
+            <h3
+              class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
+            >
+              Jasmine Green Tea
+            </h3>
+            <p
+              class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
+              data-en="Premium green tea leaves, organic jasmine blossoms"
+              data-id="Daun green tea premium, bunga melati organik"
+            >
+              Premium green tea leaves, organic jasmine blossoms
+            </p>
+            <p
+              class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep"
+            >
+              Rp 95.000
+            </p>
+          </div>
+
+          <div>
+            <h3
+              class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
+            >
+              Chamomile White Tea
+            </h3>
+            <p
+              class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
+              data-en="Organic white tea leaves, dried chamomile flowers"
+              data-id="Daun white tea organik, bunga chamomile kering"
+            >
+              Organic white tea leaves, dried chamomile flowers
+            </p>
+            <p
+              class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep"
+            >
+              Rp 105.000
+            </p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
->Jasmine Green Tea</h3>
-          <p class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
-             data-en="Premium green tea leaves, organic jasmine blossoms"
-             data-id="Daun green tea premium, bunga melati organik">Premium green tea leaves, organic jasmine blossoms</p>
-          <p class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep">Rp 95.000</p>
-        </div>
-
-        <div>
-          <h3 class="text-[16px] font-medium uppercase leading-relaxed tracking-[0.16em] text-matcha"
->Chamomile White Tea</h3>
-          <p class="mt-4 text-[15px] italic leading-relaxed text-matcha/80"
-             data-en="Organic white tea leaves, dried chamomile flowers"
-             data-id="Daun white tea organik, bunga chamomile kering">Organic white tea leaves, dried chamomile flowers</p>
-          <p class="mt-5 text-[17px] font-medium tracking-[0.12em] text-goldDeep">Rp 105.000</p>
-        </div>
+        <p
+          class="mt-16 text-[12px] uppercase tracking-luxe text-matcha/60"
+          data-en="Prices per 100 g tin &middot; Ships nationwide"
+          data-id="Harga per kaleng 100 g &middot; Dikirim se-Indonesia"
+        >
+          Prices per 100 g tin &middot; Ships nationwide
+        </p>
       </div>
+    </section>
 
-      <p class="mt-16 text-[12px] uppercase tracking-luxe text-matcha/60"
-         data-en="Prices per 100 g tin &middot; Ships nationwide"
-         data-id="Harga per kaleng 100 g &middot; Dikirim se-Indonesia">Prices per 100 g tin &middot; Ships nationwide</p>
-    </div>
-  </section>
-
-  <!-- ===== Order CTA ===== -->
-  <section id="order" class="bg-matcha">
-    <div class="mx-auto flex max-w-7xl flex-col items-center px-6 py-20 text-center">
-      <p class="text-[13px] uppercase tracking-luxe text-goldSoft"
-         data-en="Ready when you are"
-         data-id="Tersedia kapan pun Anda siap">Ready when you are</p>
-      <h2 class="mt-6 max-w-2xl font-display text-4xl leading-tight text-bone sm:text-[3rem]"
+    <!-- ===== Order CTA ===== -->
+    <section id="order" class="bg-matcha">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center px-6 py-20 text-center"
+      >
+        <p
+          class="text-[13px] uppercase tracking-luxe text-goldSoft"
+          data-en="Ready when you are"
+          data-id="Tersedia kapan pun Anda siap"
+        >
+          Ready when you are
+        </p>
+        <h2
+          class="mt-6 max-w-2xl font-display text-4xl leading-tight text-bone sm:text-[3rem]"
           data-en="Begin with a single cup."
-          data-id="Mulai dari satu gelas.">Begin with a single cup.</h2>
-      <a href="#shop"
-         class="mt-11 border border-gold px-10 py-4 text-[13px] font-medium uppercase tracking-luxe text-goldSoft transition-colors duration-300 hover:bg-gold hover:text-matcha"
-         data-en="Order Now"
-         data-id="Pesan Sekarang">Order Now</a>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="border-t border-matcha/10">
-    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row">
-      <p class="text-[12px] uppercase tracking-luxe text-matcha/75">&copy; 2026 Pratama Tea Co.</p>
-      <div class="flex gap-9">
-        <a href="#home" class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep">Instagram</a>
-        <a href="#home" class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep"
-           data-en="Journal" data-id="Jurnal">Journal</a>
-        <a href="#home" class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep"
-           data-en="Contact" data-id="Kontak">Contact</a>
+          data-id="Mulai dari satu gelas."
+        >
+          Begin with a single cup.
+        </h2>
+        <a
+          href="#shop"
+          class="mt-11 border border-gold px-10 py-4 text-[13px] font-medium uppercase tracking-luxe text-goldSoft transition-colors duration-300 hover:bg-gold hover:text-matcha"
+          data-en="Order Now"
+          data-id="Pesan Sekarang"
+          >Order Now</a
+        >
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script>
-    (function () {
-      var KEY = 'ptc-lang';
-      var btn = document.getElementById('langToggle');
-      var nodes = document.querySelectorAll('[data-en][data-id]');
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-matcha/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row"
+      >
+        <p class="text-[12px] uppercase tracking-luxe text-matcha/75">
+          &copy; 2026 Pratama Tea Co.
+        </p>
+        <div class="flex gap-9">
+          <a
+            href="#home"
+            class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep"
+            >Instagram</a
+          >
+          <a
+            href="#home"
+            class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep"
+            data-en="Journal"
+            data-id="Jurnal"
+            >Journal</a
+          >
+          <a
+            href="#home"
+            class="text-[12px] uppercase tracking-luxe text-matcha/75 transition-colors duration-300 hover:text-goldDeep"
+            data-en="Contact"
+            data-id="Kontak"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
 
-      function apply(lang) {
-        for (var i = 0; i < nodes.length; i++) {
-          var el = nodes[i];
-          el.innerHTML = el.getAttribute('data-' + lang);
-          if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-            el.setAttribute('lang', lang);
+    <script>
+      (function () {
+        var KEY = "ptc-lang";
+        var btn = document.getElementById("langToggle");
+        var nodes = document.querySelectorAll("[data-en][data-id]");
+
+        function apply(lang) {
+          for (var i = 0; i < nodes.length; i++) {
+            var el = nodes[i];
+            el.innerHTML = el.getAttribute("data-" + lang);
+            if (el.tagName === "A" || el.tagName === "BUTTON") {
+              el.setAttribute("lang", lang);
+            }
           }
+          btn.textContent = lang === "en" ? "ID" : "EN";
+          btn.setAttribute(
+            "aria-label",
+            lang === "en" ? "Ganti ke Bahasa Indonesia" : "Switch to English",
+          );
+          document.documentElement.setAttribute("lang", lang);
+          document.title =
+            lang === "en"
+              ? "Pratama Tea Co. — Good Tea, Better Days"
+              : "Pratama Tea Co. — Teh Baik, Hari Lebih Baik";
         }
-        btn.textContent = lang === 'en' ? 'ID' : 'EN';
-        btn.setAttribute('aria-label', lang === 'en' ? 'Ganti ke Bahasa Indonesia' : 'Switch to English');
-        document.documentElement.setAttribute('lang', lang);
-        document.title = lang === 'en'
-          ? 'Pratama Tea Co. — Good Tea, Better Days'
-          : 'Pratama Tea Co. — Teh Baik, Hari Lebih Baik';
-      }
 
-      var saved = null;
-      try { saved = localStorage.getItem(KEY); } catch (e) {}
-      apply(saved === 'id' ? 'id' : 'en');
+        var saved = null;
+        try {
+          saved = localStorage.getItem(KEY);
+        } catch (e) {}
+        apply(saved === "id" ? "id" : "en");
 
-      btn.addEventListener('click', function () {
-        var next = btn.textContent.trim() === 'ID' ? 'id' : 'en';
-        try { localStorage.setItem(KEY, next); } catch (e) {}
-        apply(next);
-      });
-    })();
-  </script>
-
-</body>
+        btn.addEventListener("click", function () {
+          var next = btn.textContent.trim() === "ID" ? "id" : "en";
+          try {
+            localStorage.setItem(KEY, next);
+          } catch (e) {}
+          apply(next);
+        });
+      })();
+    </script>
+  </body>
 </html>
